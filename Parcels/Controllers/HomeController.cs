@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Parcels.Models;
 
+
 namespace Parcels.Controllers
 {
   public class HomeController : Controller
@@ -15,9 +16,10 @@ namespace Parcels.Controllers
     public ActionResult Item(int ParcelLength, int ParcelWidth, int ParcelHeight, int ParcelVolume, int ShippingCost)
     // ^^is "Item" becasuse it must match the name of the "backend" file. The parameters are the auto-implemented properties
     {
-      Parcels shipEstimate = new Parcels();
+      ParcelDetails shipEstimate = new ParcelDetails();
+  
 
-      // return View(FIGURE DIS OUT);
+      return View(ShippingCost);
     }
 
     }

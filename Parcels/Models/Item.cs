@@ -4,8 +4,8 @@ using System;
 
 namespace Parcels.Models
 {
-  public class Parcels
-  // class and namespace have same name
+  public class ParcelDetails
+  // class and namespace have different name
   {
     public int ParcelLength { get; set; }
     public int ParcelWidth { get; set; }
@@ -14,9 +14,17 @@ namespace Parcels.Models
     public int ShippingCost { get; set; }
 
 
+    public int CalcVolume(int ParcelLength, int ParcelWidth, int ParcelHeight)
+    {
+      int ParcelVolume = ParcelLength * ParcelWidth * ParcelLength;
+      return ParcelVolume;
+    }
 
-
-
+    public int CalcShippingCost(int ParcelVolume)
+    {
+      int ShippingCost = ParcelVolume * 3;
+      return ShippingCost;
+    }
 
   }
 }

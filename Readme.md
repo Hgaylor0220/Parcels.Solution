@@ -11,7 +11,7 @@ _This console app allows users to enter in demensions of their package and expec
 ## Specs
 
 | Scenario | When  | given | Result |
-|:---|:---:|:---|:----|
+|:---:|:---:|:---:|:----:|
 
 | User will be able to place an order | enter the demensions  | all the demensions are numerical | Application has the user demension|
 
