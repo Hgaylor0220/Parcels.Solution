@@ -2,7 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
-    <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+    <!-- <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel> -->
+    <!-- when using the dotnet new mvc command, it creates this line. ya dont need it -->
   </PropertyGroup>
 
 

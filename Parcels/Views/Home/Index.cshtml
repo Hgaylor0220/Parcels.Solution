@@ -1,8 +1,11 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
+﻿@using ToDoList.Models;
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<h1>To Do List</h1>
+<ul>
+  @foreach (Item item in Model)
+  {
+    <li>@item.Description</li>
+  }
+
+</ul>
+<a href="/items/new">Add a new item.</a>
