@@ -2961,8 +2961,8 @@
   "RootNamespace": "Parcels",
   "Documents": [
     {
-      "FilePath": "Views/Home/Index.cshtml",
-      "TargetPath": "Views/Home/Index.cshtml",
+      "FilePath": "Views/Items/Index.cshtml",
+      "TargetPath": "Views/Items/Index.cshtml",
       "FileKind": "mvc"
     },
     {
