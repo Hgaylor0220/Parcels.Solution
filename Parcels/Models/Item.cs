@@ -12,17 +12,26 @@ namespace Parcels.Models
     public int ParcelHeight { get; set; }
     public int ParcelVolume { get; set; }
     public int ShippingCost { get; set; }
+   
+  public ParcelDetails(int length, int width , int height)
+  // The parameters here correspond with the form, it is representative of the user input, but that input is actually passed to the controller where the ParcelDetails object is instantiated. This exists so that when the ParcelDetail object is instantiated it will posess these properties.
+  {
+    ParcelLength = length;
+    ParcelHeight = height;
+    ParcelWidth = width;
+    // This is our constructor. Every parcel will have these properties. 
+  }
 
-
-    public int CalcVolume(int ParcelLength, int ParcelWidth, int ParcelHeight)
+  
+    public int CalcVolume()
     {
-      int ParcelVolume = ParcelLength * ParcelWidth * ParcelLength;
+      ParcelVolume = ParcelLength * ParcelWidth * ParcelHeight;
       return ParcelVolume;
     }
 
-    public int CalcShippingCost(int ParcelVolume)
+    public int CalcShippingCost()
     {
-      int ShippingCost = ParcelVolume * 3;
+      ShippingCost = ParcelVolume * 3;
       return ShippingCost;
     }
 
@@ -32,22 +41,3 @@ namespace Parcels.Models
 
 
 
-
-
-//     private static List<Item> _instances = new List<Item> { };
-
-//     public Item(string description)
-//     {
-//       Description = description;
-//       _instances.Add(this);
-//     }
-
-//     public static List<Item> GetAll()
-//     {
-//       return _instances;
-//     }
-
-//     public static void ClearAll()
-//     {
-//       _instances.Clear();
-//     }

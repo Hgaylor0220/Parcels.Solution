@@ -12,10 +12,11 @@
     <div class= container>
         <h1>Calculate the cost of shipping a package.</h1>
         <h3>Please enter the dimensions of your package. All dimensions must be in inches.</h3>
-        <form action ="/" method ="post">
-        
+        <form action ="/calcCost" method ="post">
+        <!-- the action represents where you want this page to take you, NOT where you curently are. The comp will look for calcCost in the controller. -->
         <label for="length" >Enter the length</label>
         <input id="length" name="length" type="text"><br>
+        <!-- length, width, and height (the names of the inputs) need to match teh names of your parameters in your controller exactly.  for & id correspond. name and the controller parameters correspond.-->
 
          <label for="width" >Enter the width</label>
         <input id="width" name="width" type="text"><br>
